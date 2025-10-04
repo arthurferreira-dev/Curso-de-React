@@ -14,7 +14,7 @@ export default function App() {
     {
       id: 2,
       title: "Gerenciador de Tarefas",
-      description: "Um gerenciador de tarefas com React",
+      description: "Um gerenciador de tarefas com React e ao mesmo tempo aprendendo React JS",
       isCompleted: true
     }
   ]);
