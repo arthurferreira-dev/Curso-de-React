@@ -1,24 +1,22 @@
 import { useState } from "react";
+import { Inputs } from "./input";
 
 export default function AddTasks( { createTaskSubmit } ) {
-    const inputsCL = 'border border-slate-300 outline-slate-400 px-4 py-2 rounded-md';
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
 
     return (
         <div className="space-y-4 p-6 bg-slate-200 rounded-md shadow flex flex-col flex-wrap">
-            <input 
+            <Inputs 
                 type="text" 
                 placeholder="Digite o título da tarefa..."
-                className={inputsCL}
                 value={title} // Tem o valor do título
                 onChange={(event) => {setTitle(event.target.value)}}
             />
 
-            <input 
+            <Inputs
                 type="text" 
                 placeholder="Digite a descrição da tarefa..."
-                className={inputsCL}
                 value={desc} // Tem o valor da descrição
                 onChange={(event) => {setDesc(event.target.value)}}
             />

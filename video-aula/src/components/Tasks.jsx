@@ -1,8 +1,8 @@
 import { ChevronRightIcon, Trash2 } from "lucide-react"
 import { useNavigate } from "react-router-dom";
+import IconsBtn from "./iconsLucide";
 
 export default function Tasks({ tasks, onTaskClick, onTaskDeleted }) {
-    const iconsLucideCL = 'bg-slate-400 duration-300 p-2 rounded-md text-white hover:cursor-pointer hover:bg-slate-500';
     const navigate = useNavigate();
 
     function onSeeDetails(task) {
@@ -23,19 +23,17 @@ export default function Tasks({ tasks, onTaskClick, onTaskDeleted }) {
                             {task.title}
                         </button>
 
-                        <button 
-                            className={iconsLucideCL}
+                        <IconsBtn
                             onClick={() => onSeeDetails(task)}
                         >
                             <ChevronRightIcon />
-                        </button>
+                        </IconsBtn>
 
-                        <button 
-                            className={iconsLucideCL}
+                        <IconsBtn
                             onClick={() => onTaskDeleted(task.id)}
                         >
                             <Trash2 />
-                        </button>
+                        </IconsBtn>
                     </li>
                 )
             )}
